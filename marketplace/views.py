@@ -11,3 +11,4 @@ def index(request):
 
 def painel(request):
     return render(request,'marketplace/painel.html')
+

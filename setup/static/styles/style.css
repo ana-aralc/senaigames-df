@@ -1,4 +1,4 @@
-/* --- Configurações Globais e Tema Escuro --- */
+        /* --- Configurações Globais e Tema Escuro --- */
         body {
             background-color: #0d0d1a; /* Azul petróleo bem escuro */
             color: #e0e0e0; /* Cinza claro para texto */
@@ -175,4 +175,102 @@
             color: #00ffff;
             transform: translateY(-3px);
             text-shadow: 0 0 8px #00ffff;
+        }
+
+         /* Título Principal */
+        .main-title {
+            font-size: 2.5em;
+            color: #002147;
+            margin-bottom: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* --- ESTILOS DO CARROSSEL --- */
+
+        /* 1. Container do Carrossel (Wrapper) */
+        .carousel-wrapper {
+            max-width: 1200px; /* Define a largura da área visível */
+            width: 90%;
+            overflow: hidden; /* Essencial: esconde os itens que estão fora da área visível */
+            position: relative;
+            /* Adiciona um gradiente nas laterais para um efeito de fade */
+            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+        }
+
+        /* 2. Faixa do Carrossel (Track) */
+        .speakers-carousel {
+            display: flex; /* Coloca todos os itens em linha */
+            gap: 40px; /* Espaço entre os cards */
+            padding: 20px 0;
+            /* Animação */
+            animation: scroll 120s linear infinite;
+        }
+
+        /* 3. Pausa a animação com uma classe */
+        .carousel-wrapper:hover .speakers-carousel {
+            animation-play-state: paused;
+        }
+
+        /* 4. Animação de rolagem */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                /* Move a faixa para a esquerda. O valor é (largura do card + gap) * número de cards */
+                transform: translateX(calc((-260px * 22)));
+            }
+        }
+
+        /* --- FIM DOS ESTILOS DO CARROSSEL --- */
+
+
+        /* Card Individual de Palestrante */
+        .speaker-card {
+            flex-shrink: 0; /* Impede que os cards encolham */
+            width: 220px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-10px); /* Leve elevação no card ao passar o mouse */
+        }
+
+        .speaker-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 6px solid #002147;
+            object-fit: cover;
+            margin-bottom: 15px;
+            background-color: #e0e0e0;
+        }
+
+        .speaker-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .speaker-card p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555555;
+            line-height: 1.4;
+            height: 40px; /* Altura fixa para alinhar */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }

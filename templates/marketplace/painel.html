@@ -1,5 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +13,30 @@
     <!-- Google Fonts: Orbitron para títulos, Roboto para texto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Estilos Customizados -->
 
+
+    </style>
+
+
     <link rel="stylesheet" href="/setup/static/styles/style.css">                
 </head>
+
 <body>
 
     <!-- Seção 1: Header (Cabeçalho) -->
     <header class="header-logos sticky-top">
         <div class="container d-flex justify-content-center align-items-center gap-4">
             <!-- Placeholder para o logo do Brasília Mais TI -->
-            <img src="/templates/marketplace/img/brasiliamaisti.png" alt="Logo Brasília Mais TI">
+            <img src="/setup/static/assets/img/brasiliamaisti.png" alt="Logo Brasília Mais TI">
             <!-- Placeholder para o logo do SENAI -->
-            <img src="/templates/marketplace/img/logosenai.png" alt="Logo SENAI">
+            <img src="/setup/static/assets/img/logosenai.png" alt="Logo SENAI">
         </div>
     </header>
 
@@ -36,66 +44,93 @@
         <!-- Seção 2: Hero (Destaque Principal) -->
         <section id="hero" class="hero">
             <div class="container fade-in-section">
-                <h1 class="display-4"><span class="text-glow">Candango</span> Neural</h1>
+                <h1 class="display-4"><span class="text-glow">Candango</span> Neural Ascensiony</h1>
                 <p class="slogan my-4">Onde a realidade é apenas o começo da jornada.</p>
                 <a href="#marketplace" class="btn btn-glow mt-3">Descubra o Jogo</a>
             </div>
         </section>
 
+
         <!-- Seção 3: Galeria de Cards (Estilo Marketplace) -->
         <section id="marketplace" class="marketplace-section">
-            <div class="container">
+            <div class="container text-center">
                 <div class="text-center mb-5 fade-in-section">
                     <h2>Conheça o Universo</h2>
                     <p class="lead text-secondary">Explore os elementos que tornam Cyber Odyssey único.</p>
                 </div>
                 <div class="row g-4 justify-content-center">
                     <!-- Card 1: Personagem Principal -->
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.2s;">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section"
+                        style="animation-delay: 0.2s;">
                         <div class="card card-tech text-center w-100">
-                            <img src="https://placehold.co/400x300/1a1a2e/FFFFFF?text=Kaira,+a+Renegada" class="card-img-top" alt="Personagem Principal Kaira">
+                            <a
+                                href="https://docs.google.com/document/d/1udqLQINb2KoBhe2Q2EOLOo6T6w632ml8GfKjJjS9XFQ/edit?usp=sharing"><img
+                                    src="gdd.png" class="card-img-top" alt="Personagem Principal Kaira"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Personagem Principal</h5>
-                                <p class="card-text text-secondary">Kaira, uma hacker renegada com implantes cibernéticos, busca a verdade nas sombras de uma metrópole neon.</p>
+                                <p class="card-text text-secondary">Kaira, uma hacker renegada com implantes
+                                    cibernéticos, busca a verdade nas sombras de uma metrópole neon.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 2: Funcionalidade Inovadora -->
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.4s;">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section"
+                        style="animation-delay: 0.4s;">
                         <div class="card card-tech text-center w-100">
                             <div class="card-body d-flex flex-column justify-content-center">
                                 <i class="ph-brain icon mx-auto mb-3"></i>
                                 <h5 class="card-title">Hackeamento Neural</h5>
-                                <p class="card-text text-secondary">Invada a mente dos inimigos, controle drones e manipule o ambiente em tempo real com uma mecânica de hacking inovadora.</p>
+                                <p class="card-text text-secondary">Invada a mente dos inimigos, controle drones e
+                                    manipule o ambiente em tempo real com uma mecânica de hacking inovadora.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 3: Tecnologia Utilizada -->
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.6s;">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section"
+                        style="animation-delay: 0.6s;">
                         <div class="card card-tech text-center w-100">
-                             <div class="card-body d-flex flex-column justify-content-center">
+                            <div class="card-body d-flex flex-column justify-content-center">
                                 <i class="ph-game-controller icon mx-auto mb-3"></i>
                                 <h5 class="card-title">Engine Gráfica</h5>
-                                <p class="card-text text-secondary">Construído na Unreal Engine 5, o jogo oferece visuais de última geração com Ray Tracing e cenários dinâmicos.</p>
+                                <p class="card-text text-secondary">Construído na Unreal Engine 5, o jogo oferece
+                                    visuais de última geração com Ray Tracing e cenários dinâmicos.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 4: Cenário -->
-                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section" style="animation-delay: 0.8s;">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch fade-in-section"
+                        style="animation-delay: 0.8s;">
                         <div class="card card-tech text-center w-100">
-                            <img src="https://placehold.co/400x300/1a1a2e/FFFFFF?text=Neo-Veridia" class="card-img-top" alt="Cenário do Jogo Neo-Veridia">
+                            <img src="https://placehold.co/400x300/1a1a2e/FFFFFF?text=Neo-Veridia" class="card-img-top"
+                                alt="Cenário do Jogo Neo-Veridia">
                             <div class="card-body">
                                 <h5 class="card-title">O Cenário</h5>
-                                <p class="card-text text-secondary">Explore Neo-Veridia, uma cidade vertical onde corporações gigantescas controlam tudo, das ruas chuvosas aos arranha-céus brilhantes.</p>
+                                <p class="card-text text-secondary">Explore Neo-Veridia, uma cidade vertical onde
+                                    corporações gigantescas controlam tudo, das ruas chuvosas aos arranha-céus
+                                    brilhantes.</p>
                             </div>
                         </div>
+                       
                     </div>
+                   
+                </div>
+                <a href="#candangos" class="btn btn-glow mt-3">Os Candangos</a>    
+            </div>
+            
+        </section>
+
+        <section id="candangos" class="hero">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="speakers-carousel" id="speakersCarousel">
                 </div>
             </div>
         </section>
+
+
+
     </main>
 
     <!-- Seção 4: Rodapé -->
@@ -128,5 +163,46 @@
             observer.observe(section);
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const speakersData = [
+                { img: '/setup/static/assets/img/romulo.jpeg',  name: 'Romulo Silvestre', title: 'Professor Python Developer' },
+                { img: '/setup/static/assets/img/luis.jpeg', name: 'Luis F.M. Silva', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/ruth.jpeg', name: 'Ruth Marques', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/helemeylson.jpeg', name: 'Helemeylson Lins', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/arthur.jpeg', name: 'Arthur Santos', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/bianca.jpeg', name: 'Bianca Lopes', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/bruno.jpeg', name: 'Bruno Pereira', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/daniele.jpeg', name: 'Daniele Gomes', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/joao.jpeg', name: 'João Oliveira', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/matheus.jpeg', name: 'Matheus Ribeiro', title: 'Aluno Python Developer' }, 
+                { img: '/setup/static/assets/img/samuel.jpeg', name: 'Samuel Alves', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/vinicius.jpeg', name: 'Vinicius dos Santos', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/henrique.jpeg', name: 'Henrique Monteiro', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/kenny.jpeg', name: 'Kenny Martins', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/evanilson.jpeg', name: 'Evanilson Braga', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/kelvin.jpeg', name: 'Kelvin Vitor', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/matheussales.jpeg', name: 'Matheus Sales', title: 'Aluno Python Developer' },
+                { img: '/setup/static/assets/img/anaclara.jpeg', name: 'Ana Clara', title: 'Aluno Python Developer' }
+            ];
+
+            const carousel = document.getElementById('speakersCarousel');
+
+            // Duplica os cards para criar o efeito de loop infinito
+            const allSpeakers = [...speakersData, ...speakersData];
+
+            allSpeakers.forEach(speaker => {
+                const card = document.createElement('div');
+                card.className = 'speaker-card';
+                card.innerHTML = `
+                    <img src="${speaker.img}" alt="Foto de ${speaker.name}">
+                    <h3>${speaker.name}</h3>
+                    <p>${speaker.title}</p>
+                `;
+                carousel.appendChild(card);
+            });
+        });
+    </script>
 </body>
+
 </html>
