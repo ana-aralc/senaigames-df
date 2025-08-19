@@ -9,6 +9,12 @@ def index(request):
     # context - objetos (python, python com banco de dados)
     return render(request,'marketplace/index.html')
 
-def painel(request):
-    return render(request,'marketplace/painel.html')
+def sou_membro(request):
+    dados = {
+        1:{"nome":"Visual Novel"},
+        2:{"nome":"Plataforma"},
+        3:{"nome":"Acao"},
+        4:{"nome":"Acao"},
+        }
+    return render(request,'marketplace/sou_membro.html', {'cards':dados})
 

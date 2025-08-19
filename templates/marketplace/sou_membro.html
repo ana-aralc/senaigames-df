@@ -1,0 +1,77 @@
+{% spaceless %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senai Games -  Membros</title>
+    <!-- <link rel="stylesheet" href="/setup/static/styles/styles_membro.css"> -->
+    <!-- <link rel="stylesheet" href="{% static 'styles/style_membro.css' %}">  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    {% for chave, valor in cards.items %}
+        <p>ID do genero: {{chave}} - Nome: {{valor.nome}}</p>
+    {% endfor %}
+
+
+    <div class="auth-container">
+        <h1>Acesso de Membros</h1>
+        <p>Apenas membros podem acessar o conteúdo exclusivo.</p>
+        
+        <form class="auth-form" action="#" method="POST">
+            <div class="form-group">
+                <input type="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Senha" required>
+            </div>
+            <select>
+                <p> ID do Gênero: {{chave}} - Nome: {{valor}} </p>
+            <select >
+                <!-- name="genero" class="form-select" -->
+            {% for chave, valor in cards.items %}
+               <option value="{{chave}}">{{valor.nome}}</option>
+            {% endfor %}
+            </select>
+
+            <button type="submit" class="auth-button">ENTRAR</button>
+        </form>
+        
+        <div class="auth-links">
+            <a> Não tem uma conta? </a>
+            <a href="{% url 'cadastro' %}">Cadastre-se</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.background-particles');
+            const numParticles = 30;
+
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 5 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                particle.style.left = `${x}vw`;
+                particle.style.top = `${y}vh`;
+
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = `${delay}s`;
+
+                container.appendChild(particle);
+            }
+        });
+    </script>
+    <div class="background-particles"></div>
+</body>
+</html>
