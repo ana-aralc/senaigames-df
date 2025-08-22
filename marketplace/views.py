@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from .models import Membro
+from marketplace.models import Genero
 
 # Create your views here.
 def index(request):
@@ -9,12 +11,21 @@ def index(request):
     # context - objetos (python, python com banco de dados)
     return render(request,'marketplace/index.html')
 
-def sou_membro(request):
+def autentica_membro(request):
+    """
     dados = {
         1:{"nome":"Visual Novel"},
         2:{"nome":"Plataforma"},
         3:{"nome":"Acao"},
         4:{"nome":"Acao"},
-        }
-    return render(request,'marketplace/sou_membro.html', {'cards':dados})
+    }
+    """
+    dados = Membro.objects.all()
+    generos = Genero.objects.all()
+    return render(request,'marketplace/sou_membro.html', {'cards':dados, 'generos':generos})
+
+
+
+
+
 

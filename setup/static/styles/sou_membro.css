@@ -1,0 +1,85 @@
+/* Variáveis para personalização fácil */
+:root {
+    --primary-color: #6c5ce7; /* Roxo */
+    --secondary-color: #a29bfe; /* Roxo claro */
+    --text-color: #444;
+    --background-color: #f7f9fc; /* Cinza muito claro */
+    --card-background: #fff;
+    --border-radius: 12px;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --font-family: 'Poppins', sans-serif;
+    --transition-speed: 0.3s ease;
+}
+
+/* Reset básico e estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Estilização do container principal */
+form {
+    background: var(--card-background);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título e textos de informação */
+h6 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: left;
+    color: #666;
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+/* Estilo para os inputs e o select */
+form input,
+form select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
